@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE resources PUBLIC "-//GlassFish.org//DTD GlassFish Application Server 3.1 Resource Definitions//EN" "http://glassfish.org/dtds/glassfish-resources_1_5.dtd">
+<resources>
+  <jdbc-resource pool-name="sqlserver_lojaPool" target="server" jndi-name="jdbc/loja"/>
+  <jdbc-connection-pool 
+      name="sqlserver_lojaPool" 
+      resource-type="javax.sql.DataSource" 
+      datasource-classname="com.microsoft.sqlserver.jdbc.SQLServerDataSource">
+    <property name="ServerName" value="localhost"/>
+    <property name="PortNumber" value="1433"/>
+    <property name="DatabaseName" value="loja"/>
+    <property name="User" value="seu_usuario"/>
+    <property name="Password" value="sua_senha"/>
+  </jdbc-connection-pool>
+</resources>
